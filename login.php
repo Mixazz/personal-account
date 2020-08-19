@@ -50,14 +50,14 @@
 										<h1 class="font__family-montserrat font__weight-bold font__size-42 line__height-42 mt-0 mb-45 text-center text-lg-left">ЛИЧНЫЙ КАБИНЕТ</h1>
 
 
-										<form action="#" class="brk-form brk-form-strict maxw-570 mx-auto mx-lg-0" data-brk-library="component__form">
+										<form action="auth.php" class="brk-form brk-form-strict maxw-570 mx-auto mx-lg-0" data-brk-library="component__form" method="POST">
 											<div class="col-sm-12">
 												<?php display_flash_message('success') ?>
 												<?php display_flash_message('danger') ?>
 
 											</div>
-											<input type="text" placeholder="Email адрес" required>
-											<input type="password" placeholder="Пароль" required>
+											<input type="text" placeholder="Email адрес" name="email" required>
+											<input type="password" placeholder="Пароль" name="password" required>
 											<div class="no-margin pl-10 pr-10 mb-30 mt-40 d-flex flex-wrap justify-content-between align-items-center">
 												<div>
 													<input id="checkbox-strict-1" name="checkbox" type="checkbox" value="1" checked="checked">

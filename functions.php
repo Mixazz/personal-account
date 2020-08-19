@@ -75,9 +75,8 @@ function login($email, $password)
 {
     $user = get_user_by_email($email);
 
-    if (!empty($user)) {
+    if ($user) {
         if (password_verify($password, $user['password'])) {
-            set_flash_message('success', 'Добро пожаловать, вы авторизировались!');
             $_SESSION['login'] = $email;
             return true;
         }
